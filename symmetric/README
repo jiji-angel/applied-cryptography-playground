@@ -7,5 +7,4 @@ This example demonstrates the difference between:
 Key takeaway:
 > Encryption without authentication is unsafe.
 
-The AES-CBC example is intentionally insecure and exists solely
-to demonstrate how ciphertext tampering can go undetected.
+The AES-CBC example is intentionally insecure and exists solely to demonstrate how ciphertext tampering can go undetected.
