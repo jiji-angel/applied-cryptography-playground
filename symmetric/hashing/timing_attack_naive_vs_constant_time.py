@@ -15,12 +15,26 @@ import time
 import os
 
 
+#def insecure_compare(a: bytes, b: bytes) -> bool:
+#    """
+#    Insecure comparison using '=='.
+#    May return early and leak timing information.
+#    """
+#    return a == b
+
 def insecure_compare(a: bytes, b: bytes) -> bool:
     """
-    Insecure comparison using '=='.
-    May return early and leak timing information.
+    Intentionally insecure byte-by-byte comparison.
+    Returns early on mismatch and leaks timing information.
     """
-    return a == b
+    if len(a) != len(b):
+        return False
+
+    for x, y in zip(a, b):
+        if x != y:
+            return False
+
+    return True
 
 
 def secure_compare(a: bytes, b: bytes) -> bool:
