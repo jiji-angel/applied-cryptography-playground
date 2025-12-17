@@ -1,0 +1,11 @@
+## PKI and TLS Certificate Validation
+
+Public Key Infrastructure (PKI) underpins secure communication on the internet. Incorrect certificate validation can completely undermine TLS.
+
+This section demonstrates:
+- Disabling certificate verification 
+- Incomplete validation (no hostname check) 
+- Proper certificate validation 
+
+Key takeaway:
+> TLS is only secure when certificates are fully validated, including trust chain and hostname verification.
