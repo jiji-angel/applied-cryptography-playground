@@ -1,4 +1,5 @@
-## PKI and TLS Certificate Validation
+1. PKI and TLS Certificate Validation
+--------------------------------------
 
 Public Key Infrastructure (PKI) underpins secure communication on the internet. Incorrect certificate validation can completely undermine TLS.
 
@@ -9,3 +10,14 @@ This section demonstrates:
 
 Key takeaway:
 > TLS is only secure when certificates are fully validated, including trust chain and hostname verification.
+
+
+2. Signature Verification Misuse
+-------------------------------
+
+Correct signature verification requires binding signatures to the intended context (protocol, API, domain). Verifying signatures over partial or transformed data can enable replay or logic flaws.
+
+This example demonstrates the following for EdDSA (Ed25519):
+- Missing context binding 
+- Verifying incorrect data 
+- Proper signature verification 
